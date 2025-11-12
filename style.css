@@ -1,0 +1,52 @@
+:root{
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --accent: #ff8c00;
+    --muted: #6b7280;
+    --shadow: 0 6px 18px rgba(15,23,42,0.08);
+}
+
+*{box-sizing: border-box}
+body{
+    margin:0;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 100%);
+    color: #0f172a;
+    -webkit-font-smoothing:antialiased;
+}
+
+header{padding:32px 16px 8px}
+h1{
+    font-weight:700;
+    font-size:40px;
+    text-align:center;
+    margin:0 auto;
+    color:#0b1220;
+}
+
+.container{max-width:900px;margin:18px auto;padding:0 16px}
+
+#searchContainer{display:flex;gap:12px;justify-content:center;align-items:center;padding:18px}
+#countryInput{padding:12px 14px;border-radius:10px;border:1px solid #d1d5db;width:320px;font-size:16px}
+#searchBtn{padding:12px 18px;border-radius:10px;border:none;background:var(--accent);color:#fff;font-weight:600;cursor:pointer;transition:transform .15s ease,box-shadow .15s}
+#searchBtn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,140,0,0.18)}
+
+.card{display:flex;gap:20px;align-items:flex-start;padding:18px;background:var(--card);border-radius:12px;box-shadow:var(--shadow);margin-top:18px}
+.card.hidden{display:none}
+.flag{flex:0 0 auto}
+.flag img{max-width:220px;border-radius:8px;box-shadow:0 4px 14px rgba(2,6,23,0.06)}
+.details{flex:1;text-align:right;display:flex;flex-direction:column;align-items:flex-end}
+#countryName{margin:0 0 8px;font-size:24px}
+#infoList p{margin:6px 0;color:var(--muted)}
+
+.message{margin-top:14px;text-align:center;color:#b91c1c;font-weight:600}
+
+.loader{width:36px;height:36px;border-radius:50%;border:4px solid rgba(0,0,0,0.1);border-top-color:var(--accent);margin:18px auto;animation:spin .9s linear infinite}
+.loader.hidden{display:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+@media (max-width:640px){
+    .card{flex-direction:column;align-items:center}
+    #countryInput{width:100%}
+    .details{align-items:center;text-align:center}
+}
