@@ -1,6 +1,6 @@
 :root{
     --bg: #f4f7fb;
-    --card: #ffffff;
+    --card: #e6dbcc;
     --accent: #ff8c00;
     --muted: #6b7280;
     --shadow: 0 6px 18px rgba(15,23,42,0.08);
@@ -27,7 +27,7 @@ h1{
 .container{max-width:900px;margin:18px auto;padding:0 16px}
 
 #searchContainer{display:flex;gap:12px;justify-content:center;align-items:center;padding:18px}
-#countryInput{padding:12px 14px;border-radius:10px;border:1px solid #d1d5db;width:320px;font-size:16px}
+#cityInput{align-items: center; padding:12px 14px;border-radius:10px;border:1px solid #d1d5db;width:320px;font-size:16px}
 #searchBtn{padding:12px 18px;border-radius:10px;border:none;background:var(--accent);color:#fff;font-weight:600;cursor:pointer;transition:transform .15s ease,box-shadow .15s}
 #searchBtn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,140,0,0.18)}
 
@@ -36,8 +36,31 @@ h1{
 .flag{flex:0 0 auto}
 .flag img{max-width:220px;border-radius:8px;box-shadow:0 4px 14px rgba(2,6,23,0.06)}
 .details{flex:1;text-align:right;display:flex;flex-direction:column;align-items:flex-end}
-#countryName{margin:0 0 8px;font-size:24px}
-#infoList p{margin:6px 0;color:var(--muted)}
+#countryName{margin-left: 100px; padding-right:18px;font-size:24px}
+
+.section{
+    padding:18px;
+    background:var(--card);
+    border-radius:12px;
+    box-shadow:var(--shadow);
+    margin-top:18px;
+    display:grid;
+    grid-template-columns: 1fr auto;
+    gap:18px;
+    align-items:var(--card);
+}
+.section h2{margin:0 0 8px 0;font-size:20px}
+.section p{margin:6px 0;color:var(--muted)}
+.section img, .section #weatherIcon{max-width:160px;border-radius:8px;display:block}
+
+
+
+.weather{display:flex;align-items:center;gap:12px;margin-top:12px}
+.weather img{width:64px;height:64px}
+.weatherText{display:flex;flex-direction:column;align-items:flex-end}
+.weatherText p{margin:0}
+
+.note{margin-top:12px;text-align:center;color:var(--muted);font-size:13px}
 
 .message{margin-top:14px;text-align:center;color:#b91c1c;font-weight:600}
 

@@ -3,48 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>country Details</title>
+    <title>Country Details &amp; Weather</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Countries Information</h1>
+    <h1>Country Details &amp; Weather</h1>
+
+  <div class="container">
     <div id="searchContainer">
-        <input type="text" id="countryInput" placeholder="Enter country name...">
-        <button id="searchBtn">Search</button>
+      <input type="text" id="cityInput" placeholder="Enter city name...">
+      <button id="searchBtn">Search</button>
     </div>
-<h2 id="countryName"></h2>
-<div id="flagimage"></div>
 
-<div id="info">
-  <div id="capital"></div>
-  <div id="region"></div>
-  <div id="population"></div>
-  <div id="altSpellings"></div> 
-  <div id=""> </div>
-</div>
+    <div class="section" id="weatherSection">
+      <h2>Weather Details</h2>
+      <p id="city"></p>
+      <p id="country"></p>
+      <p id="temp"></p>
+      <p id="condition"></p>
+      <p id="humidity"></p>
+      <p id="wind"></p>
+      <img id="weatherIcon" alt="">
+    </div>
 
+    <div class="section" id="countrySection">
+      <h2>Country Details</h2>
+      <div id="flagimage"></div>
+      <p id="capital"></p>
+      <p id="region"></p>
+      <p id="population"></p>
+      <p id="currency"></p>
+      <p id="startOfWeek"></p>
+    </div>
+  </div>
 
-
-</body>
-    <main class="container">
-        <section id="results" class="card hidden">
-            <div class="flag" id="flagimage"></div>
-            <div class="details">
-                <h2 id="countryName"></h2>
-                <div id="infoList">
-                    <p id="capital"></p>
-                    <p id="region"></p>
-                    <p id="population"></p>
-                    <p id="tld"></p>
-                    <p id="currencies"></p>
-                </div>
-            </div>
-        </section>
-
-        <div id="message" class="message"></div>
-        <div id="loader" class="loader hidden" aria-hidden="true"></div>
-    </main>
-
-    <script src="app.js" defer></script>
+  <script src="app.js"></script>
 </body>
 </html>
