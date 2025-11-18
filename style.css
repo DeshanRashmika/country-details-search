@@ -36,7 +36,14 @@ h1{
 .flag{flex:0 0 auto}
 .flag img{max-width:220px;border-radius:8px;box-shadow:0 4px 14px rgba(2,6,23,0.06)}
 .details{flex:1;text-align:right;display:flex;flex-direction:column;align-items:flex-end}
-#countryName{margin-left: 100px; padding-right:18px;font-size:24px}
+#countryName{
+    margin: top 50;
+    margin-left: 0;
+    padding-right: 0;
+    text-align: left;
+    font-size: 24px;
+    font-weight: 700;
+}
 
 .section{
     padding:18px;
@@ -71,5 +78,5 @@ h1{
 @media (max-width:640px){
     .card{flex-direction:column;align-items:center}
     #countryInput{width:100%}
-    .details{align-items:center;text-align:center}
+    .details{align-items:center;text-align:left}
 }
